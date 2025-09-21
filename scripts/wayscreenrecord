@@ -1,0 +1,14 @@
+#!/bin/sh
+output="~/Videos/Screenrecordings/$(date +%Y-%m-%d-%H-%M-%S)-screenrecording.mkv"
+
+case "$1" in
+  "select")
+    geometry=$(slurp -b 00000000 -w 1) || exit
+    wf-recorder -g "$geometry" -f "$output"
+    notify-send "Screenrecording finished." ;;
+  "kill")
+    killall wf-recorder || exit ;;
+  *)  
+    wf-recorder -f "$output"
+    notify-send "Screenrecording finished." ;;
+esac
