@@ -4,8 +4,6 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "+|"
 
-#song_columns_list_format = (15)[]{a} (4f)[]{nE} (35)[]{t} (25)[]{b} (7f)[]{l}
-
 song_columns_list_format = (15)[]{a} (35)[]{t} (25)[]{b} (7f)[]{l}
 
 show_duplicate_tags = no
