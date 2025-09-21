@@ -1,0 +1,22 @@
+{
+  // Use a "custom" logo type that points to your ASCII file
+  "logo": {
+    "type": "small",
+    "padding": {
+        "top": 1,
+        "left": 2
+    }   
+  },  
+  // Modules to show
+  "modules": [
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "wm",
+    "terminal",
+    "memory",
+    "disk"
+  ]
+}
