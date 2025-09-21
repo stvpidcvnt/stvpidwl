@@ -1,0 +1,42 @@
+anchor = top-right
+margin-top = 29
+margin-right = 10
+
+font = /usr/share/fonts/TTF/HackNerdFont-Regular.ttf
+font-size = 10
+hint-font = false
+
+text-color = cdd6f4
+placeholder-color = 7f849c
+
+background-color = 1e1e2eCC    
+
+input-background = 585b70CC
+input-color = cdd6f4
+
+prompt-text = "notif: "
+prompt-background = 00000000
+prompt-color = cdd6f4
+
+default-result-background = 00000000
+alternate-result-background = 00000000
+#selection-background = 313244CC
+selection-color = cdd6f4
+
+width = 30% 
+height = 20% 
+corner-radius = 0 
+outline-width = 0 
+border-width = 0 
+
+padding-top = 12
+padding-bottom = 12
+padding-left = 12
+padding-right = 12
+
+num-results = 10
+
+ascii-input = true
+hide-cursor = false
+text-cursor = true
+text-cursor-style = bar
