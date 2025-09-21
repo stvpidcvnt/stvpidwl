@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+#i installed swaylock-effects then did this
+swaylock -l --clock --font "Hack Nerd Font" --text-color ffffff --ring-color 1e1e2eCC --key-hl-color ffe4a0 --line-color 00000000 --separator-color 1e1e2eCC --image ~/Pictures/wired.png --inside-color 1e1e2eCC --inside-ver-color 1e1e2eCC --line-ver-color 00000000 --ring-ver-color 1e1e2eCC --text-ver-color ffffff --inside-wrong-color 1e1e2eCC --line-wrong-color 00000000 --ring-wrong-color 1e1e2eCC --text-wrong-color ffffff --indicator-idle-visible --inside-clear-color 1e1e2eCC --line-clear-color 00000000 --ring-clear-color 1e1e2eCC --text-clear-color ffffff -L --inside-caps-lock-color 1e1e2eCC --line-caps-lock-color 00000000 --ring-caps-lock-color 1e1e2eCC --text-caps-lock-color ffffff --datestr "%a, %d/%m/%y" --grace-no-mouse --grace-no-touch &
