@@ -1,0 +1,16 @@
+#!/bin/bash
+NOTIFS_FILE="$HOME/notifs"
+LAST_MOD=0
+
+while true; do
+    if [ -f "$NOTIFS_FILE" ]; then
+        NEW_MOD=$(stat -c %Y "$NOTIFS_FILE")
+        if [ "$NEW_MOD" -ne "$LAST_MOD" ]; then
+            LAST_MOD=$NEW_MOD
+            if [ -s "$NOTIFS_FILE" ]; then
+                printer | tofi --config "$HOME/.config/tofi/notifyconfig"
+            fi
+        fi
+    fi  
+    sleep 0.5 
+done
