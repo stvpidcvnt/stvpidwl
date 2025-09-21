@@ -1,0 +1,44 @@
+#!/bin/bash
+
+file="$HOME/notifs"
+max_len=40
+
+# Check if file is empty
+if [[ ! -s "$file" ]]; then
+    exit 0
+fi
+
+# Get last line numbers of 'zsh' and 'notify-send'
+last_zsh=$(grep -n '^zsh$' "$file" | tail -n 1 | cut -d: -f1)
+last_notify=$(grep -n '^notify-send$' "$file" | tail -n 1 | cut -d: -f1)
+
+# Total lines in file
+total_lines=$(wc -l < "$file")
+
+if [[ -z "$last_zsh" ]]; then
+    start=$((last_notify + 3))
+    end=$((last_notify + 4))
+    (( end > total_lines )) && end=$total_lines
+    sed -n "${start},${end}p" "$file"
+    exit 0
+fi
+
+if [[ -z "$last_notify" ]]; then
+    start=$((last_zsh + 3))
+    end=$((last_zsh + 4))
+    (( end > total_lines )) && end=$total_lines
+    sed -n "${start},${end}p" "$file"
+    exit 0
+fi
+
+if (( last_zsh > last_notify )); then
+    start=$((last_zsh + 3))
+    end=$((last_zsh + 4))
+else
+    start=$((last_notify + 3))
+    end=$((last_notify + 4))
+fi
+
+(( pick > total_lines )) && pick=$total_lines
+
+sed -n "${start},${end}p" "$file" | fold -s -w "$max_len"
