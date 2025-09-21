@@ -1,0 +1,3 @@
+i added fast-forwading from https://github.com/jgreco/mpv-scripts/blob/master/fastforward.lua
+i also added thumbnails from https://github.com/marzzzello/mpv_thumbnail_script
+for cache i changed the cache directory from mpv_thumbnail_script_server.lua altho i guess i couldve done it from opt-scripts
