@@ -1,0 +1,13 @@
+call plug#begin('~/.vim/plugged')
+
+"Fugitive Vim Github Wrapper"
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
+Plug 'preservim/nerdtree'
+Plug 'PhilRunninger/nerdtree-buffer-ops'
+Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+
+call plug#end()
