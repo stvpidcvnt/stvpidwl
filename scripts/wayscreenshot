@@ -1,0 +1,9 @@
+#!/bin/sh
+output="~/Pictures/Screenshots/$(date +%Y-%m-%d-%H-%M-%S)-screenshot.png"
+
+case "$1" in
+  "select") slurp -b 00000000 -w 1 | grim -g - "$output" || exit ;;
+  *) grim "$output" || exit ;;
+esac
+
+notify-send "Screenshot taken."
