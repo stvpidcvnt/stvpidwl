@@ -1,5 +1,4 @@
 {
-  // Use a "custom" logo type that points to your ASCII file
   "logo": {
     "type": "small",
     "padding": {
