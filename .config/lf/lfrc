@@ -16,7 +16,7 @@ cmd mkdir ${{
 cmd mkfile ${{ 
   printf "File Name: "
   read ans 
-  nvim $ans
+  vim $ans
 }}
 
 # Archive bindings
